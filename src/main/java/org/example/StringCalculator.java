@@ -13,6 +13,7 @@ public class StringCalculator {
         for (String part : parts) {
             sum += Integer.parseInt(part.trim());
         }
+
         return sum;
     }
 }
