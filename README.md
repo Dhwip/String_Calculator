@@ -23,11 +23,12 @@ It follows step by step implementation of assessment.
 ## 🖼️ Screenshots
 
 ### String Calculator Function
-![Screenshot](screenshots/TestCaseCode1.png)
+
+![Screenshot](screenshots/StringFunc1.png)
 
 ### Test Cases with code
 
-![Screenshot](screenshots/StringFunc1.png)
+![Screenshot](screenshots/TestCaseCode1.png)
 ![Screenshot](screenshots/TestCaseOutput1.png)
 
 # Step2
