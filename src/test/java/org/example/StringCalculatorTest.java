@@ -58,4 +58,21 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertEquals(10, calc.add("1\n2\n3,4"));
     }
+    @Test
+    public void testCustomDelimiterSemicolon() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("//;\n1;2;3"));
+    }
+
+    @Test
+    public void testCustomDelimiterPipe() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(15, calc.add("//|\n4|5|6"));
+    }
+
+    @Test
+    public void testCustomDelimiterSpecialChar() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(10, calc.add("//.\n2.3.5"));
+    }
 }

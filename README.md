@@ -58,3 +58,20 @@ It follows step by step implementation of assessment.
 
 ![Screenshot](screenshots/TestCaseCode3.png)
 ![Screenshot](screenshots/TestCaseOutput3.png)
+
+# Step4
+
+#### Support different delimiters:
+
+- To change the delimiter, the beginning of the string will contain a separate line that looks like this:"//[delimiter]\n[numbers…]". 
+- For example, "//;\n1;2" where the delimiter is ";" should return 3.
+
+## 🖼️ Screenshots
+
+### String Calculator Function
+![Screenshot](screenshots/StringFunc3.png)
+
+### Test Cases with code
+
+![Screenshot](screenshots/TestCaseCode4.png)
+![Screenshot](screenshots/TestCaseOutput4.png)
