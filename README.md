@@ -18,9 +18,9 @@ This is a sample Java Maven project built using IntelliJ IDEA.
 ## 🖼️ Screenshots
 
 ### String Calculator Function
-![Screenshot](./sf1.png)
+![Screenshot](screenshots/TestCaseCode1.png)
 
 ### Test Cases with code
 
-![Screenshot](./tco1.png)
-![Screenshot](./tca1.png)
+![Screenshot](screenshots/StringFunc1.png)
+![Screenshot](screenshots/TestCaseOutput1.png)
