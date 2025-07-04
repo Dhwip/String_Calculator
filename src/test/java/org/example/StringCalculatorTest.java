@@ -47,4 +47,15 @@ public class StringCalculatorTest {
         String input = "1,2,3,4,5,6,7,8,9,10";
         assertEquals(55, calc.add(input));
     }
+    @Test
+    public void testNumbersWithOnlyNewline() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("1\n2\n3"));
+    }
+
+    @Test
+    public void testNewlinesAndCommas() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(10, calc.add("1\n2\n3,4"));
+    }
 }

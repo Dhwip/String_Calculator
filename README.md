@@ -13,7 +13,7 @@ It follows step by step implementation of assessment.
 # 🚀 Steps
 # Step1
 
-#### Create a simple String calculator with a method signature like this:
+#### Created a simple String calculator with a method signature like this:
 #### int add(string numbers)
 #### Input: a string of comma-separated numbers
 #### Output: an integer, sum of the numbers
@@ -32,7 +32,7 @@ It follows step by step implementation of assessment.
 
 # Step2
 
-#### Allow the add method to handle any amount of numbers.
+#### Allowed the add method to handle any amount of numbers.
 
 ## 🖼️ Screenshots
 
@@ -43,3 +43,17 @@ It follows step by step implementation of assessment.
 
 ![Screenshot](screenshots/TestCaseCode2.png)
 ![Screenshot](screenshots/TestCaseOutput2.png)
+
+# Step3
+
+#### Allowed the add method to handle new lines between numbers (instead of commas). ("1\n2,3" should return 6)
+
+## 🖼️ Screenshots
+
+### String Calculator Function
+![Screenshot](screenshots/StringFunc2.png)
+
+### Test Cases with code
+
+![Screenshot](screenshots/TestCaseCode3.png)
+![Screenshot](screenshots/TestCaseOutput3.png)
