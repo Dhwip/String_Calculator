@@ -147,3 +147,19 @@ It follows step by step implementation of assessment.
 
 ![Screenshot](screenshots/TestCaseCode8.png)
 ![Screenshot](screenshots/TestCaseOutput8.png)
+
+# Step9
+
+#### Allowed multiple delimiters with length longer than one char
+
+## 🖼️ Screenshots
+
+### String Calculator Function
+
+![Screenshot](screenshots/StringFunc7.png)
+
+### Test Cases with code
+
+![Screenshot](screenshots/TestCaseCode9.png)
+![Screenshot](screenshots/TestCaseOutput9.png)
+
