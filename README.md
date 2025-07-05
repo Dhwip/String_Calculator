@@ -125,12 +125,25 @@ It follows step by step implementation of assessment.
 
 ### String Calculator Function
 
-#### Updation only in for loop for condition that num > 1000 must be ignored
-
 ![Screenshot](screenshots/StringFunc6.png)
-
 
 ### Test Cases with code
 
 ![Screenshot](screenshots/TestCaseCode7.png)
 ![Screenshot](screenshots/TestCaseOutput7.png)
+
+# Step8
+
+#### Allow multiple delimiters like this: “//[delim1][delim2]\n” 
+- for example “//[*][%]\n1*2%3” should return 6.
+
+## 🖼️ Screenshots
+
+### String Calculator Function
+
+![Screenshot](screenshots/StringFunc7.png)
+
+### Test Cases with code
+
+![Screenshot](screenshots/TestCaseCode8.png)
+![Screenshot](screenshots/TestCaseOutput8.png)

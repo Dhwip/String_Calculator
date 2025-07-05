@@ -152,4 +152,35 @@ public class StringCalculatorTest {
         assertEquals(6, calc.add("//[***]\n1***2***1001***3"));
     }
 
+    @Test
+    public void testMultipleDelimitersOfLengthOne() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("//[*][%]\n1*2%3"));
+    }
+
+    @Test
+    public void testMultipleDelimitersOfDifferentLengths() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(10, calc.add("//[***][%%]\n2***3%%5"));
+    }
+
+    @Test
+    public void testMultipleDelimitersWithSpecialChars() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(15, calc.add("//[$$][@!]\n5$$5@!5"));
+    }
+
+    @Test
+    public void testMultipleDelimitersWithNegativeNumbers() {
+        StringCalculator calc = new StringCalculator();
+        NegativeNumberException ex = assertThrows(NegativeNumberException.class, () -> calc.add("//[*][#]\n1*-2#3"));
+        assertEquals("negative numbers not allowed [-2]", ex.getMessage());
+    }
+
+    @Test
+    public void testMultipleDelimitersWithNumberGreaterThan1000() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("//[--][++]\n1--1001++5"));
+    }
+
 }

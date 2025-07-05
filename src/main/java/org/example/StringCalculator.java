@@ -19,14 +19,15 @@ public class StringCalculator {
             int delimiterEndIndex = numbers.indexOf('\n');
             String delimiterDefinition = numbers.substring(2, delimiterEndIndex);
 
-            if (delimiterDefinition.startsWith("[") && delimiterDefinition.endsWith("]")) {
+            if (delimiterDefinition.contains("[") && delimiterDefinition.contains("]")) {
                 List<String> delimiters = new ArrayList<>();
                 Matcher matcher = Pattern.compile("\\[(.*?)]").matcher(delimiterDefinition);
                 while (matcher.find()) {
                     delimiters.add(Pattern.quote(matcher.group(1)));
                 }
                 delimiter = String.join("|", delimiters);
-            } else {
+            }
+            else {
                 delimiter = Pattern.quote(delimiterDefinition);
             }
 
@@ -38,11 +39,13 @@ public class StringCalculator {
         List<Integer> negativeNumbers = new ArrayList<>();
 
         for (String part : parts) {
+            if (part.trim().isEmpty()) continue;
+
             int num = Integer.parseInt(part.trim());
             if (num < 0) {
                 negativeNumbers.add(num);
             }
-            else if(num <= 1000){
+            else if (num <= 1000) {
                 sum += num;
             }
         }
@@ -54,4 +57,3 @@ public class StringCalculator {
         return sum;
     }
 }
-
