@@ -115,3 +115,22 @@ It follows step by step implementation of assessment.
 
 ![Screenshot](screenshots/TestCaseCode6.png)
 ![Screenshot](screenshots/TestCaseOutput6.png)
+
+# Step7
+
+#### Delimiters can be of any length with the following format: “//[delimiter]\n” 
+- for example: “//[***]\n1***2***3” should return 6
+
+## 🖼️ Screenshots
+
+### String Calculator Function
+
+#### Updation only in for loop for condition that num > 1000 must be ignored
+
+![Screenshot](screenshots/StringFunc6.png)
+
+
+### Test Cases with code
+
+![Screenshot](screenshots/TestCaseCode7.png)
+![Screenshot](screenshots/TestCaseOutput7.png)

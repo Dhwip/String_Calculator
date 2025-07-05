@@ -2,6 +2,8 @@ package org.example;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class StringCalculator {
 
@@ -15,9 +17,19 @@ public class StringCalculator {
 
         if (numbers.startsWith("//")) {
             int delimiterEndIndex = numbers.indexOf('\n');
-            String customDelimiter = numbers.substring(2, delimiterEndIndex);
-            customDelimiter = java.util.regex.Pattern.quote(customDelimiter);
-            delimiter = customDelimiter;
+            String delimiterDefinition = numbers.substring(2, delimiterEndIndex);
+
+            if (delimiterDefinition.startsWith("[") && delimiterDefinition.endsWith("]")) {
+                List<String> delimiters = new ArrayList<>();
+                Matcher matcher = Pattern.compile("\\[(.*?)]").matcher(delimiterDefinition);
+                while (matcher.find()) {
+                    delimiters.add(Pattern.quote(matcher.group(1)));
+                }
+                delimiter = String.join("|", delimiters);
+            } else {
+                delimiter = Pattern.quote(delimiterDefinition);
+            }
+
             numberSection = numbers.substring(delimiterEndIndex + 1);
         }
 

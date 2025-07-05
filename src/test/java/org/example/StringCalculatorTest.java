@@ -121,4 +121,35 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertEquals(0, calc.add("1001,2000,3001"));
     }
+
+    @Test
+    public void testDelimiterOfAnyLength() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("//[***]\n1***2***3"));
+    }
+
+    @Test
+    public void testDelimiterOfLengthOneUsingBrackets() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(3, calc.add("//[*]\n1*2"));
+    }
+
+    @Test
+    public void testMultipleCustomDelimitersOfLengthOne() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("//[*][%]\n1*2%3"));
+    }
+
+    @Test
+    public void testMultipleCustomDelimitersOfDifferentLengths() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(10, calc.add("//[***][%%]\n1***2%%3***4"));
+    }
+
+    @Test
+    public void testCustomDelimiterAndNumbersAboveThousand() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("//[***]\n1***2***1001***3"));
+    }
+
 }
