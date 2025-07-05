@@ -75,3 +75,24 @@ It follows step by step implementation of assessment.
 
 ![Screenshot](screenshots/TestCaseCode4.png)
 ![Screenshot](screenshots/TestCaseOutput4.png)
+
+# Step5
+
+#### Calling add with a negative number will throw an exception: "negative numbers not allowed <negative_number>".
+
+- If there are multiple negative numbers, show all of them in the exception message, separated by commas.
+
+## 🖼️ Screenshots
+
+### String Calculator Function
+
+![Screenshot](screenshots/StringFunc4.png)
+
+### NegativeNumberException Class
+
+![Screenshot](screenshots/NegativeExcepClass.png)
+
+### Test Cases with code
+
+![Screenshot](screenshots/TestCaseCode4.png)
+![Screenshot](screenshots/TestCaseOutput4.png)

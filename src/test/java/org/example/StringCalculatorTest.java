@@ -4,6 +4,7 @@ package org.example;
 import org.junit.Test;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertThrows;
 
 public class StringCalculatorTest {
 
@@ -74,5 +75,25 @@ public class StringCalculatorTest {
     public void testCustomDelimiterSpecialChar() {
         StringCalculator calc = new StringCalculator();
         assertEquals(10, calc.add("//.\n2.3.5"));
+    }
+
+    @Test
+    public void testNegativeNumberThrowsException() {
+        StringCalculator calc = new StringCalculator();
+        NegativeNumberException ex = assertThrows(NegativeNumberException.class, () -> calc.add("1,-2,3"));
+        assertEquals("negative numbers not allowed [-2]", ex.getMessage());
+    }
+
+    @Test
+    public void testMultipleNegativeNumbersThrowException() {
+        StringCalculator calc = new StringCalculator();
+        NegativeNumberException ex = assertThrows(NegativeNumberException.class, () -> calc.add("1,-2,-4,3"));
+        assertEquals("negative numbers not allowed [-2, -4]", ex.getMessage());
+    }
+
+    @Test
+    public void testNegativeZeroIsTreatedAsZero() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(0, calc.add("-0"));
     }
 }
