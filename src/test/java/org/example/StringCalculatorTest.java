@@ -96,4 +96,29 @@ public class StringCalculatorTest {
         StringCalculator calc = new StringCalculator();
         assertEquals(0, calc.add("-0"));
     }
+
+    @Test
+    public void testNumbersGreaterThanThousandAreIgnored() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(2, calc.add("2,1001"));
+        assertEquals(1002, calc.add("2,1000"));  // 1000 is allowed
+    }
+
+    @Test
+    public void testNumbersWithNewlineAndGreaterThanThousand() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(6, calc.add("1\n2\n1001,3"));
+    }
+
+    @Test
+    public void testCustomDelimiterWithLargeNumberIgnored() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(5, calc.add("//;\n2;1001;3"));
+    }
+
+    @Test
+    public void testOnlyLargeNumbersReturnZero() {
+        StringCalculator calc = new StringCalculator();
+        assertEquals(0, calc.add("1001,2000,3001"));
+    }
 }
